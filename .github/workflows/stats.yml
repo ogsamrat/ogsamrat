@@ -8,12 +8,15 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    environment: 
+      name: production    
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
           user: ogsamrat
+          token: ${{ secrets.METRICS_TOKEN }}          
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Calcutta
