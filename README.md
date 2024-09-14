@@ -7,6 +7,12 @@ I'm a student passionate about computing stuffs and learning new things. Current
  
 - **Currently learning: Python :snake:, JavaScript**
 
+## WakaTime Stats
+
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
+
 ### Find me out at
 [![Telegram](https://img.shields.io/badge/telegram-1b77FF.svg?style=for-the-badge&logo=telegram)](https://t.me/GodDrick)
 
