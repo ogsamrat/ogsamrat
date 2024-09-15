@@ -1,13 +1,12 @@
-### Hey there <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">
+## Hey there <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">
 
-I'm a student passionate about computing stuffs and learning new things. Currently increasing my knowledge by learning more languages while working on some small projects & contributing to open source community. 
-## Programming Languages:
+I'm a student passionate about computing stuffs and learning new things. Currently increasing my knowledge by learning more languages while working on some small projects & contributing to open source community.
 
-- **Languages learnt: C++, Batch, VBScript**
- 
-- **Currently learning: Python :snake:, JavaScript**
+## 🛠️ Languages & Tools
 
-## 📊 Stats:
+![Programming Languages](https://skillicons.dev/icons?i=c,cpp,py,java,js,vscode,github,linux,heroku,redis,mongodb,postgresql&perline=12)
+
+## 📊 Stats
 
 ![Metrics](./github-metrics.svg)
 <!--START_SECTION:waka-->
@@ -20,6 +19,6 @@ No activity tracked
 
 <!--END_SECTION:waka-->
 
-### Find me out at
+## 🔗 Connect with me
 [![Telegram](https://img.shields.io/badge/telegram-1b77FF.svg?style=for-the-badge&logo=telegram)](https://t.me/SamForSure)
 
