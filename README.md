@@ -11,6 +11,12 @@ I'm a student passionate about computing stuffs and learning new things. Current
 
 <!--START_SECTION:waka-->
 
+```txt
+Total Time: 0 secs
+
+No activity tracked
+```
+
 <!--END_SECTION:waka-->
 
 ## 📊 Stats:
