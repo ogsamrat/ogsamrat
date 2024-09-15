@@ -4,11 +4,11 @@ I'm a student passionate about computing stuffs and learning new things. Current
 
 ## 🛠️ Languages & Tools
 
-![Programming Languages](https://skillicons.dev/icons?i=c,cpp,py,java,js,vscode,github,linux,heroku,redis,mongodb,postgresql&perline=12)
+[![Programming Languages](https://skillicons.dev/icons?i=c,cpp,py,java,js,vscode,github,linux,heroku,redis,mongodb,postgresql&perline=12)](https://github.com/ogsamrat)
 
 ## 📊 Github Stats
 
-![Metrics](./github-metrics.svg)
+[![Metrics](./github-metrics.svg)](https://github.com/ogsamrat)
 <!--START_SECTION:waka-->
 
 ```txt
