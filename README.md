@@ -6,7 +6,7 @@ I'm a student passionate about computing stuffs and learning new things. Current
 
 ![Programming Languages](https://skillicons.dev/icons?i=c,cpp,py,java,js,vscode,github,linux,heroku,redis,mongodb,postgresql&perline=12)
 
-## 📊 Stats
+## 📊 Github Stats
 
 ![Metrics](./github-metrics.svg)
 <!--START_SECTION:waka-->
