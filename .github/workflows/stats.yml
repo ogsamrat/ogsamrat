@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lstalomeow/metrics@projects-v2
+      - uses: stalomeow/metrics@projects-v2
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
