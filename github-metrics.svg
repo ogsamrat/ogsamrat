@@ -181,14 +181,14 @@
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="297.11485476324265" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="297.11485476324265" y="0" width="73.02009461359758" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="370.1349493768402" y="0" width="71.87970530756212" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="442.01465468440233" y="0" width="12.180204969133941" height="8" fill="#e34c26"/>
-                    <rect mask="url(#languages-bar)" x="454.1948596535363" y="0" width="4.116126448573155" height="8" fill="#663399"/>
-                    <rect mask="url(#languages-bar)" x="458.31098610210944" y="0" width="1.2569217116759157" height="8" fill="#4F5D95"/>
-                    <rect mask="url(#languages-bar)" x="459.5679078137853" y="0" width="0.25382374200984276" height="8" fill="#AA6746"/>
-                    <rect mask="url(#languages-bar)" x="459.82173155579517" y="0" width="0.17826844420480614" height="8" fill="#384d54"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="297.10979838925977" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="297.10979838925977" y="0" width="72.96328490044888" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="370.0730832897086" y="0" width="71.82378281853572" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="441.89686610824435" y="0" width="12.302509950804906" height="8" fill="#e34c26"/>
+                    <rect mask="url(#languages-bar)" x="454.19937605904926" y="0" width="4.112924097712551" height="8" fill="#663399"/>
+                    <rect mask="url(#languages-bar)" x="458.3123001567618" y="0" width="1.2559438252150923" height="8" fill="#4F5D95"/>
+                    <rect mask="url(#languages-bar)" x="459.5682439819769" y="0" width="0.253626266862074" height="8" fill="#AA6746"/>
+                    <rect mask="url(#languages-bar)" x="459.82187024883893" y="0" width="0.17812975116103055" height="8" fill="#384d54"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -1364,7 +1364,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="1530.0566666666668 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="1530.8833333333334 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g stroke-width="2" fill="none" fill-rule="evenodd">
@@ -1386,10 +1386,10 @@
                                     <span class="prefix">Master</span>
                                     deployer
                                     <div class="value-wrapper">
-                                        <div class="value">15807</div>
+                                        <div class="value">15815</div>
                                     </div>
                                 </div>
-                                <div class="text">Repositories have been deployed 15807 times</div>
+                                <div class="text">Repositories have been deployed 15815 times</div>
                             </div>
                         </div>
                         <div class="achievement s largeable-width-half">
@@ -1540,7 +1540,7 @@
                                 <div class="title">
                                     <span class="prefix">Super</span>
                                     developer
-                                    <span class="gh">ranked 862k out of 217m users</span>
+                                    <span class="gh">ranked 863k out of 217m users</span>
                                     <div class="value-wrapper">
                                         <div class="value">53</div>
                                     </div>
