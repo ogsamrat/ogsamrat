@@ -1,30 +1,80 @@
-## Hey there [<img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">](#) 
+<p align="center">
+  <img src="./assets/profile-hero.svg" width="100%" alt="Samrat Talukdar, building AI systems, developer infrastructure, and agentic products" />
+</p>
 
-I'm a student passionate about computing stuffs and learning new things. Currently increasing my knowledge by learning more languages while working on some small projects & contributing to open source community.
+<p align="center">
+  <a href="https://drick.in"><img src="https://img.shields.io/badge/web-drick.in-7C3AED?style=for-the-badge&logo=safari&logoColor=white" alt="Website" /></a>
+  <a href="https://t.me/SamForSure"><img src="https://img.shields.io/badge/telegram-SamForSure-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="https://github.com/ogsamrat?tab=repositories"><img src="https://img.shields.io/badge/explore-my_builds-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="Explore my repositories" /></a>
+</p>
 
-## 🛠️ Languages & Tools
+<p align="center">
+  <sub>AI systems · developer infrastructure · agentic products · onchain experiments</sub>
+</p>
 
-[![](https://skillicons.dev/icons?i=c,cpp,py,java,js,vscode,github,linux,heroku,redis,mongodb,postgresql&perline=12)](#)
+---
 
-## 📊 Github Stats
+### what i do
 
-[![](./github-metrics.svg)](#)
-<!--START_SECTION:waka-->
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <sub>01 / BUILD</sub><br /><br />
+      <strong>AI agents and automation</strong><br />
+      Agent runtimes, workflows, internal tools, and automation.
+    </td>
+    <td width="33%" valign="top">
+      <sub>02 / IMPROVE</sub><br /><br />
+      <strong>Developer infrastructure</strong><br />
+      Proxies, deployments, observability, and reliability.
+    </td>
+    <td width="33%" valign="top">
+      <sub>03 / EXPLORE</sub><br /><br />
+      <strong>Onchain products</strong><br />
+      x402 APIs, identity, wallets, and multichain systems.
+    </td>
+  </tr>
+</table>
 
-```txt
-Total Time: 306 hrs 51 mins
+### selected builds
 
-Python               120 hrs 25 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   39.25 %
-HTML                 32 hrs 27 mins        ⣿⣿⣶⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   10.58 %
-TypeScript           30 hrs 59 mins        ⣿⣿⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   10.10 %
-Other                25 hrs 7 mins         ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   08.19 %
-Markdown             19 hrs 42 mins        ⣿⣶⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   06.42 %
-```
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ogsamrat/a2a-ecommerce">a2a-ecommerce</a></h3>
+      Agents that verify, negotiate, and pay onchain for autonomous commerce.
+      <br /><br />
+      <code>TypeScript</code> <code>AI agents</code> <code>payments</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ogsamrat/PixaRegistry">PixaRegistry</a></h3>
+      A multichain, agent-native discovery layer for verified, machine-payable APIs.
+      <br /><br />
+      <code>TypeScript</code> <code>x402</code> <code>multichain</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ogsamrat/Vox">Vox</a></h3>
+      An end-to-end audio intelligence pipeline for transcription and analysis with Whisper and Llama.
+      <br /><br />
+      <code>Python</code> <code>speech AI</code> <code>LLMs</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ogsamrat/helix-perp">helix-perp</a></h3>
+      A perpetual-futures DEX for gold, FX, and crypto with onchain orders, oracle pricing, and a shared LP vault.
+      <br /><br />
+      <code>TypeScript</code> <code>Stellar</code> <code>DeFi</code>
+    </td>
+  </tr>
+</table>
 
-<!--END_SECTION:waka-->
+### tools i reach for
 
-## 🔗 Connect with me
-[![Telegram](https://img.shields.io/badge/telegram-1b77FF.svg?style=for-the-badge&logo=telegram)](https://t.me/SamForSure)
-[![Linkedin](https://img.shields.io/badge/linkedin-0072b1.svg?style=for-the-badge&logo=linkedin)](https://github.com/ogsamrat#-connect-with-me)
-[![Discord](https://img.shields.io/badge/discord-D3D3D3.svg?style=for-the-badge&logo=discord)](https://github.com/ogsamrat#-connect-with-me)
-[![Instagram](https://img.shields.io/badge/instagram-fccc63.svg?style=for-the-badge&logo=instagram)](https://github.com/ogsamrat#-connect-with-me)
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,js,py,solidity,nodejs,nextjs,react,postgres,redis,mongodb,docker,linux,git,githubactions,aws&perline=15" alt="TypeScript, JavaScript, Python, Solidity, Node.js, Next.js, React, PostgreSQL, Redis, MongoDB, Docker, Linux, Git, GitHub Actions, and AWS" />
+</p>
+
+<p align="center">
+  <sub>Kolkata, India</sub>
+</p>

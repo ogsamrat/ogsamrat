@@ -1,0 +1,68 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Samrat Talukdar</title>
+  <desc id="desc">Profile banner for Samrat Talukdar.</desc>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="18" x2="1160" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.52" stop-color="#11142B"/>
+      <stop offset="1" stop-color="#081A24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="72" x2="815" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="0.48" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(1025 34) rotate(134) scale(310 285)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(150 340) rotate(-45) scale(350 260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#FFFFFF" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <clipPath id="card">
+      <rect width="1200" height="340" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="340" rx="28" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+    <rect width="1200" height="340" fill="url(#glowA)"/>
+    <rect width="1200" height="340" fill="url(#glowB)"/>
+
+    <circle cx="1058" cy="145" r="116" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.8"/>
+    <circle cx="1058" cy="145" r="82" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <circle cx="1058" cy="145" r="47" fill="#7C3AED" fill-opacity="0.2" stroke="#A78BFA" stroke-opacity="0.7"/>
+    <circle cx="1058" cy="145" r="13" fill="#22D3EE" filter="url(#soft)"/>
+    <circle cx="1058" cy="145" r="7" fill="#E0F2FE"/>
+    <path d="M936 145H1180M1058 23V267" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <path d="M975 62L1141 228M1141 62L975 228" stroke="#FFFFFF" stroke-opacity="0.055"/>
+
+    <rect x="66" y="42" width="156" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <circle cx="87" cy="60" r="5" fill="#22D3EE"/>
+    <text x="102" y="65" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="600">@ogsamrat</text>
+
+    <text x="66" y="151" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="64" font-weight="800" letter-spacing="-2.2">SAMRAT TALUKDAR</text>
+    <rect x="68" y="169" width="570" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="66" y="218" fill="#C7D2FE" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="500">i build, ship &amp; sleep.</text>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="0.7">
+      <rect x="66" y="260" width="124" height="36" rx="10" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA" stroke-opacity="0.42"/>
+      <text x="84" y="283" fill="#C4B5FD">AI SYSTEMS</text>
+      <rect x="204" y="260" width="132" height="36" rx="10" fill="#22D3EE" fill-opacity="0.1" stroke="#22D3EE" stroke-opacity="0.38"/>
+      <text x="222" y="283" fill="#67E8F9">DEV INFRA</text>
+      <rect x="350" y="260" width="186" height="36" rx="10" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA" stroke-opacity="0.42"/>
+      <text x="368" y="283" fill="#C4B5FD">AGENTIC PRODUCTS</text>
+    </g>
+
+    <text x="1103" y="307" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" text-anchor="end">KOLKATA · INDIA</text>
+  </g>
+  <rect x="0.75" y="0.75" width="1198.5" height="338.5" rx="27.25" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.5"/>
+</svg>
