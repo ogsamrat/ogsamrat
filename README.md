@@ -1,18 +1,5 @@
 <p align="center">
-  <img src="./hi.gif" width="30" alt="hi" />
-</p>
-
-```text
-███████╗ █████╗ ███╗   ███╗██████╗  █████╗ ████████╗
-██╔════╝██╔══██╗████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝
-███████╗███████║██╔████╔██║██████╔╝███████║   ██║
-╚════██║██╔══██║██║╚██╔╝██║██╔══██╗██╔══██║   ██║
-███████║██║  ██║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║
-╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
-```
-
-<p align="center">
-  <samp>samrat@kolkata:~$ i build, ship &amp; sleep.</samp>
+  <img src="./assets/terminal.svg" width="100%" alt="samrat talukdar, building infrastructure, agents, and onchain systems" />
 </p>
 
 <p align="center">
