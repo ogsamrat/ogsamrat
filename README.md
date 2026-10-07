@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/terminal.svg" width="100%" alt="samrat talukdar, building infrastructure, agents, and onchain systems" />
+  <img src="./assets/terminal.svg?v=theme-neutral" width="100%" alt="samrat talukdar, building infrastructure, agents, and onchain systems" />
 </p>
 
 <p align="center">
