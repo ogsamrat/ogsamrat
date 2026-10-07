@@ -38,5 +38,5 @@
 ### `./activity`
 
 <p align="center">
-  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ogsamrat&amp;theme=transparent" alt="Samrat's GitHub contribution graph" />
+  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ogsamrat&amp;theme=transparent&amp;name=%E2%80%8B" alt="Samrat's GitHub contribution graph" />
 </p>
