@@ -2,28 +2,16 @@
   <title id="title">Samrat Talukdar</title>
   <desc id="desc">A compact terminal showing Samrat's current areas of work.</desc>
   <style>
-    .card { fill: #F6F8FA; stroke: #D0D7DE; }
-    .divider { stroke: #D0D7DE; }
-    .primary { fill: #24292F; }
-    .muted { fill: #57606A; }
+    .card { fill: transparent; stroke: #6E7781; stroke-opacity: 0.42; }
+    .divider { stroke: #6E7781; stroke-opacity: 0.32; }
+    .primary { fill: #2F80ED; }
+    .muted { fill: #6E7781; }
     .quiet { fill: #6E7781; }
-    .green { fill: #1A7F37; }
-    .blue { fill: #0969DA; }
+    .green { fill: #2DA44E; }
+    .blue { fill: #2F80ED; }
     .red-dot { fill: #CF222E; }
     .yellow-dot { fill: #BF8700; }
     .green-dot { fill: #1A7F37; }
-    @media (prefers-color-scheme: dark) {
-      .card { fill: #161B22; stroke: #30363D; }
-      .divider { stroke: #30363D; }
-      .primary { fill: #F0F6FC; }
-      .muted { fill: #8B949E; }
-      .quiet { fill: #7D8590; }
-      .green { fill: #3FB950; }
-      .blue { fill: #58A6FF; }
-      .red-dot { fill: #FF7B72; }
-      .yellow-dot { fill: #D29922; }
-      .green-dot { fill: #3FB950; }
-    }
   </style>
 
   <rect class="card" x="1" y="1" width="958" height="166" rx="12" stroke-width="2"/>
@@ -37,7 +25,7 @@
   <text class="green" x="28" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">samrat@kolkata</text>
   <text class="quiet" x="166" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">:</text>
   <text class="blue" x="178" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">~</text>
-  <text class="primary" x="192" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">$ whoami</text>
+  <text class="muted" x="192" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">$ whoami</text>
 
   <text class="primary" x="28" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">samrat talukdar</text>
   <text class="muted" x="28" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">infra / agents / onchain / automation</text>
