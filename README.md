@@ -38,10 +38,5 @@
 ### `./activity`
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=ogsamrat&amp;show_icons=true&amp;include_all_commits=true&amp;rank_icon=github&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=2F80ED&amp;icon_color=22D3EE&amp;text_color=8B949E" alt="Samrat's GitHub statistics" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=ogsamrat&amp;theme=transparent&amp;hide_border=true&amp;ring=2F80ED&amp;fire=22D3EE&amp;currStreakLabel=2F80ED&amp;sideLabels=8B949E&amp;dates=8B949E" alt="Samrat's GitHub contribution streak" />
-</p>
-
-<p align="center">
   <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ogsamrat&amp;theme=transparent" alt="Samrat's GitHub contribution graph" />
 </p>
