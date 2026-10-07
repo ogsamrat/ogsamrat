@@ -22,10 +22,10 @@
   <circle class="green-dot" cx="57" cy="18" r="5"/>
   <text class="quiet" x="480" y="23" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" text-anchor="middle">samrat@github</text>
 
-  <text class="green" x="28" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">samrat@kolkata</text>
-  <text class="quiet" x="166" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">:</text>
-  <text class="blue" x="178" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">~</text>
-  <text class="muted" x="192" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">$ whoami</text>
+  <text class="green" x="28" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">sam@macbook</text>
+  <text class="quiet" x="132" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">:</text>
+  <text class="blue" x="144" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">~</text>
+  <text class="muted" x="158" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">$ whoami</text>
 
   <text class="primary" x="28" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="700">samrat talukdar</text>
   <text class="muted" x="28" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">infra / agents / onchain / automation</text>
