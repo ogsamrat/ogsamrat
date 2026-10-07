@@ -26,7 +26,7 @@
 | [omnirush](https://github.com/omnirush-ai/omnirush-gui) | desktop coding agent for working across models |
 | [a2a-ecommerce](https://github.com/ogsamrat/a2a-ecommerce) | agents verify, negotiate, and pay onchain |
 | [PixaRegistry](https://github.com/ogsamrat/PixaRegistry) | registry for verified x402 APIs across chains |
-| [Vox](https://github.com/ogsamrat/Vox) | transcription and audio analysis with Whisper and Llama |
+| [credport](https://github.com/ogsamrat/credport) | reusable zero-knowledge identity credentials on Midnight |
 | [helix-perp](https://github.com/ogsamrat/helix-perp) | perpetual futures exchange on Stellar |
 
 ### `./stack`
