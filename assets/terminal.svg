@@ -33,7 +33,7 @@
   <circle class="green" cx="852" cy="68" r="4"/>
   <text class="muted" x="865" y="73" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">online</text>
 
-  <rect class="blue" x="367" y="125" width="9" height="18" rx="1">
+  <rect class="blue" x="374" y="125" width="9" height="18" rx="1">
     <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
   </rect>
 </svg>
