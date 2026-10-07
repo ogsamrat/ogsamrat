@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ogsamrat/ogsamrat/11737c1a97ea4dfe929bcfec194dd17d57948506/assets/terminal.svg" width="100%" alt="samrat talukdar, building infrastructure, agents, and onchain systems" />
+  <img src="https://raw.githubusercontent.com/ogsamrat/ogsamrat/98f83b311e57b3f6057dc8de9e4db082eea19312/assets/terminal.svg" width="100%" alt="samrat talukdar, building infrastructure, agents, and onchain systems" />
 </p>
 
 <p align="center">
