@@ -18,7 +18,7 @@ QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
     createdAt
-    publicEmail
+    email
     repositories(first: 1, privacy: PUBLIC, ownerAffiliations: OWNER) {
       totalCount
     }
@@ -85,7 +85,7 @@ def render(user: dict, today: dt.date) -> str:
         raise ValueError("Invalid contribution total; keep the old image")
     repos = int(user["repositories"]["totalCount"])
     joined = dt.date.fromisoformat(user["createdAt"][:10]).year
-    email = html.escape(user.get("publicEmail") or "me@drick.in")
+    email = html.escape(user.get("email") or "me@drick.in")
     left, right, top, bottom = 572, 1132, 86, 257
     ceiling = max(buckets) * 1.12
     points = [
