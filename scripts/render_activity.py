@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
 import json
 import os
@@ -17,7 +18,7 @@ LOGIN = "ogsamrat"
 OUTPUT = Path("assets/activity.svg")
 README = Path("README.md")
 ACTIVITY_SOURCE = re.compile(
-    r'(?<=src=")\./assets/activity(?:-\d{8})?\.svg(?:\?rev=[^"]+)?'
+    r'(?<=src=")\./assets/activity(?:-\d{8}(?:-[0-9a-f]{12})?)?\.svg(?:\?rev=[^"]+)?'
     r'(?=" alt="Samrat\'s GitHub contribution graph")'
 )
 QUERY = """
@@ -186,7 +187,8 @@ def main() -> None:
             error = exc
     else:
         raise RuntimeError("Could not refresh GitHub activity; old image remains") from error
-    dated_output = OUTPUT.with_name(f"activity-{today:%Y%m%d}.svg")
+    content_hash = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
+    dated_output = OUTPUT.with_name(f"activity-{today:%Y%m%d}-{content_hash}.svg")
     readme = README.read_text(encoding="utf-8")
     updated_readme, replacements = ACTIVITY_SOURCE.subn(f"./assets/{dated_output.name}", readme)
     if replacements != 1:
