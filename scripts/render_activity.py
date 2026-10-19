@@ -59,7 +59,7 @@ def get_user(token: str, today: dt.date) -> dict:
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.load(response)
     if payload.get("errors") or not payload.get("data", {}).get("user"):
-        raise ValueError(str(payload.get("errors", "GitHub returned no usable contribution data"))[:400])
+        raise ValueError("GitHub returned no usable contribution data")
     return payload["data"]["user"]
 
 
@@ -67,7 +67,12 @@ def render(user: dict, today: dt.date) -> str:
     start = today - dt.timedelta(days=364)
     calendar = user["contributionsCollection"]["contributionCalendar"]
     days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
-    buckets = [0] * 12
+    months = []
+    year, month = start.year, start.month
+    while (year, month) <= (today.year, today.month):
+        months.append((year, month))
+        year, month = (year + 1, 1) if month == 12 else (year, month + 1)
+    buckets = [0] * len(months)
     seen = 0
     for day in days:
         date = dt.date.fromisoformat(day["date"])
@@ -75,7 +80,7 @@ def render(user: dict, today: dt.date) -> str:
             count = int(day["contributionCount"])
             if count < 0:
                 raise ValueError("Negative contribution count")
-            buckets[min(11, ((date - start).days * 12) // 365)] += count
+            buckets[months.index((date.year, date.month))] += count
             seen += 1
     if seen < 350 or sum(buckets) == 0:
         raise ValueError("Incomplete or empty contribution calendar; keep the old image")
@@ -84,39 +89,57 @@ def render(user: dict, today: dt.date) -> str:
     if total <= 0:
         raise ValueError("Invalid contribution total; keep the old image")
     repos = int(user["repositories"]["totalCount"])
-    joined = dt.date.fromisoformat(user["createdAt"][:10]).year
+    joined = dt.date.fromisoformat(user["createdAt"][:10])
+    years = today.year - joined.year - ((today.month, today.day) < (joined.month, joined.day))
     email = html.escape(user.get("email") or "me@drick.in")
-    left, right, top, bottom = 572, 1132, 86, 257
-    ceiling = max(buckets) * 1.12
+    left, right, top, bottom = 448, 1104, 53, 270
+    ceiling = max(200, ((max(buckets) + 199) // 200) * 200)
     points = [
-        (left + i * (right - left) / 11, bottom - count * (bottom - top) / ceiling)
+        (left + i * (right - left) / (len(buckets) - 1), bottom - count * (bottom - top) / ceiling)
         for i, count in enumerate(buckets)
     ]
-    line = " ".join(f"{'M' if i == 0 else 'L'} {x:.1f} {y:.1f}" for i, (x, y) in enumerate(points))
+    line = f"M {points[0][0]:.1f} {points[0][1]:.1f}"
+    for i in range(1, len(points)):
+        px, py = points[i - 1]
+        x, y = points[i]
+        midpoint = (px + x) / 2
+        line += f" C {midpoint:.1f} {py:.1f}, {midpoint:.1f} {y:.1f}, {x:.1f} {y:.1f}"
     area = f"{line} L {right} {bottom} L {left} {bottom} Z"
     ticks = "".join(
-        f'<text x="{x:.1f}" y="289" text-anchor="middle" class="axis">'
-        f'{(start + dt.timedelta(days=round((i + .5) * 365 / 12))).strftime("%b %y")}</text>'
-        for i, (x, _) in enumerate(points) if i % 2 == 0
+        f'<line x1="{x:.1f}" y1="270" x2="{x:.1f}" y2="280" stroke="#43828c"/>'
+        f'<text x="{x:.1f}" y="302" text-anchor="middle" class="axis">'
+        f'{year % 100:02d}/{month:02d}</text>'
+        for i, ((year, month), (x, _)) in enumerate(zip(months, points)) if i % 2 == 0
     )
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="GitHub contribution activity for the past year">
+    y_ticks = "".join(
+        f'<line x1="1104" y1="{bottom - value * (bottom - top) / ceiling:.1f}" '
+        f'x2="1116" y2="{bottom - value * (bottom - top) / ceiling:.1f}" stroke="#43828c"/>'
+        f'<text x="1124" y="{bottom - value * (bottom - top) / ceiling + 7:.1f}" class="axis">{value:,}</text>'
+        for value in range(0, ceiling + 1, 200)
+    )
+    compact_total = f"{total / 1000:.2f}k" if total >= 1000 else str(total)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="338" viewBox="0 0 1200 338" role="img" aria-label="GitHub contribution activity for the past year">
 <style>
-  .main {{ font: 600 31px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f0f6fc; }}
-  .meta {{ font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #9ba9ba; }}
-  .axis {{ font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #9ba9ba; }}
-  .small {{ font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #9ba9ba; letter-spacing: 1.2px; }}
+  .meta {{ font: 400 25px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }}
+  .axis {{ font: 400 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }}
+  .small {{ font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }}
 </style>
-<rect x="0.5" y="0.5" width="1199" height="319" rx="18" fill="#0d1117" stroke="#30363d"/>
-<text x="40" y="48" class="small">GITHUB ACTIVITY · LAST 365 DAYS</text>
-<text x="40" y="111" class="main">{total:,} contributions</text>
-<text x="40" y="158" class="meta">{repos} public repositories</text>
-<text x="40" y="195" class="meta">On GitHub since {joined}</text>
-<text x="40" y="232" class="meta">{email}</text>
-<line x1="{left}" y1="{bottom}" x2="{right}" y2="{bottom}" stroke="#30363d"/>
-<path d="{area}" fill="#2f81f7" fill-opacity=".23"/>
-<path d="{line}" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="none" stroke="#0969da" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="41" cy="83" r="17"/><path d="M32 94v-5c-4-2-5-6-3-9l3-2 2-5 5 3 5-3 2 5 3 2c2 3 1 7-3 9v5"/>
+  <path d="M27 137h27v28H27z M27 160h27 M33 137v23"/>
+  <circle cx="41" cy="220" r="16"/><path d="M41 209v12l8 5"/>
+  <path d="M25 271h32v23H25z M26 272l15 12 15-12"/>
+</g>
+<text x="73" y="91" class="meta">{compact_total} Contributions on GitHub</text>
+<text x="73" y="160" class="meta">{repos} Public Repos</text>
+<text x="73" y="228" class="meta">Joined GitHub {years} years ago</text>
+<text x="73" y="290" class="meta">{email}</text>
+<text x="1104" y="29" text-anchor="end" class="small">contributions in the last year</text>
+<line x1="{left}" y1="{bottom}" x2="{right}" y2="{bottom}" stroke="#43828c"/>
+<line x1="{right}" y1="{top}" x2="{right}" y2="{bottom}" stroke="#43828c"/>
+<path d="{area}" fill="#0969ff"/>
 {ticks}
-<text x="1132" y="48" text-anchor="end" class="small">UPDATED {today.isoformat()}</text>
+{y_ticks}
 </svg>
 '''
 
