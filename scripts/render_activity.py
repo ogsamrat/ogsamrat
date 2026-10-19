@@ -8,12 +8,18 @@ import html
 import json
 import os
 from pathlib import Path
+import re
 import urllib.error
 import urllib.request
 
 
 LOGIN = "ogsamrat"
 OUTPUT = Path("assets/activity.svg")
+README = Path("README.md")
+ACTIVITY_SOURCE = re.compile(
+    r'(?<=src=")\./assets/activity(?:-\d{8})?\.svg(?:\?rev=[^"]+)?'
+    r'(?=" alt="Samrat\'s GitHub contribution graph")'
+)
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
@@ -156,10 +162,21 @@ def main() -> None:
             error = exc
     else:
         raise RuntimeError("Could not refresh GitHub activity; old image remains") from error
+    dated_output = OUTPUT.with_name(f"activity-{today:%Y%m%d}.svg")
+    readme = README.read_text(encoding="utf-8")
+    updated_readme, replacements = ACTIVITY_SOURCE.subn(f"./assets/{dated_output.name}", readme)
+    if replacements != 1:
+        raise ValueError("Expected exactly one activity image in README; old image remains")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".svg.tmp")
     temporary.write_text(svg, encoding="utf-8")
     temporary.replace(OUTPUT)
+    dated_temporary = dated_output.with_suffix(".svg.tmp")
+    dated_temporary.write_text(svg, encoding="utf-8")
+    dated_temporary.replace(dated_output)
+    readme_temporary = README.with_suffix(".md.tmp")
+    readme_temporary.write_text(updated_readme, encoding="utf-8")
+    readme_temporary.replace(README)
 
 
 if __name__ == "__main__":
