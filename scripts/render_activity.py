@@ -59,7 +59,7 @@ def get_user(token: str, today: dt.date) -> dict:
     with urllib.request.urlopen(request, timeout=30) as response:
         payload = json.load(response)
     if payload.get("errors") or not payload.get("data", {}).get("user"):
-        raise ValueError("GitHub returned no usable contribution data")
+        raise ValueError(str(payload.get("errors", "GitHub returned no usable contribution data"))[:400])
     return payload["data"]["user"]
 
 
