@@ -41,16 +41,8 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 """
 
 
-def get_user(token: str, today: dt.date) -> dict:
-    start = today - dt.timedelta(days=364)
-    body = json.dumps({
-        "query": QUERY,
-        "variables": {
-            "login": LOGIN,
-            "from": f"{start.isoformat()}T00:00:00Z",
-            "to": f"{(today + dt.timedelta(days=1)).isoformat()}T00:00:00Z",
-        },
-    }).encode()
+def fetch_user(token: str, query: str, variables: dict) -> dict:
+    body = json.dumps({"query": query, "variables": variables}).encode()
     request = urllib.request.Request(
         "https://api.github.com/graphql",
         data=body,
@@ -67,6 +59,38 @@ def get_user(token: str, today: dt.date) -> dict:
     if payload.get("errors") or not payload.get("data", {}).get("user"):
         raise ValueError("GitHub returned no usable contribution data")
     return payload["data"]["user"]
+
+
+def get_user(token: str, today: dt.date) -> dict:
+    start = today - dt.timedelta(days=364)
+    user = fetch_user(token, QUERY, {
+        "login": LOGIN,
+        "from": f"{start.isoformat()}T00:00:00Z",
+        "to": f"{(today + dt.timedelta(days=1)).isoformat()}T00:00:00Z",
+    })
+    joined = dt.date.fromisoformat(user["createdAt"][:10])
+    if joined > today:
+        raise ValueError("Invalid GitHub join date")
+    years = range(joined.year, today.year + 1)
+    yearly_fields = "\n".join(
+        f'y{year}: contributionsCollection(from: "{year}-01-01T00:00:00Z", '
+        f'to: "{year}-12-31T23:59:59Z") '
+        '{ contributionCalendar { totalContributions } }'
+        for year in years
+    )
+    totals = fetch_user(
+        token,
+        f"query($login: String!) {{ user(login: $login) {{ {yearly_fields} }} }}",
+        {"login": LOGIN},
+    )
+    try:
+        user["allTimeContributions"] = sum(
+            int(totals[f"y{year}"]["contributionCalendar"]["totalContributions"])
+            for year in years
+        )
+    except (KeyError, TypeError) as exc:
+        raise ValueError("Incomplete all-time contribution totals") from exc
+    return user
 
 
 def render(user: dict, today: dt.date) -> str:
@@ -91,9 +115,9 @@ def render(user: dict, today: dt.date) -> str:
     if seen < 350 or sum(buckets) == 0:
         raise ValueError("Incomplete or empty contribution calendar; keep the old image")
 
-    total = int(calendar["totalContributions"])
+    total = int(user["allTimeContributions"])
     if total <= 0:
-        raise ValueError("Invalid contribution total; keep the old image")
+        raise ValueError("Invalid all-time contribution total; keep the old image")
     repos = int(user["repositories"]["totalCount"])
     joined = dt.date.fromisoformat(user["createdAt"][:10])
     years = today.year - joined.year - ((today.month, today.day) < (joined.month, joined.day))
