@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="338" viewBox="0 0 1200 338" role="img" aria-label="GitHub contribution activity for the past year">
+<style>
+  .meta { font: 400 25px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }
+  .axis { font: 400 19px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }
+  .small { font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #43828c; }
+</style>
+<g fill="none" stroke="#0969da" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="41" cy="83" r="17"/><path d="M32 94v-5c-4-2-5-6-3-9l3-2 2-5 5 3 5-3 2 5 3 2c2 3 1 7-3 9v5"/>
+  <path d="M27 137h27v28H27z M27 160h27 M33 137v23"/>
+  <circle cx="41" cy="220" r="16"/><path d="M41 209v12l8 5"/>
+  <path d="M25 271h32v23H25z M26 272l15 12 15-12"/>
+</g>
+<text x="73" y="91" class="meta">15.97k Contributions on GitHub</text>
+<text x="73" y="160" class="meta">54 Public Repos</text>
+<text x="73" y="228" class="meta">Joined GitHub 6 years ago</text>
+<text x="73" y="290" class="meta">me@drick.in</text>
+<text x="1104" y="29" text-anchor="end" class="small">contributions in the last year</text>
+<line x1="448" y1="270" x2="1104" y2="270" stroke="#43828c"/>
+<line x1="1104" y1="53" x2="1104" y2="270" stroke="#43828c"/>
+<path d="M 448.0 269.2 C 475.3 269.2, 475.3 270.0, 502.7 270.0 C 530.0 270.0, 530.0 268.8, 557.3 268.8 C 584.7 268.8, 584.7 269.9, 612.0 269.9 C 639.3 269.9, 639.3 269.2, 666.7 269.2 C 694.0 269.2, 694.0 264.9, 721.3 264.9 C 748.7 264.9, 748.7 267.0, 776.0 267.0 C 803.3 267.0, 803.3 266.6, 830.7 266.6 C 858.0 266.6, 858.0 248.1, 885.3 248.1 C 912.7 248.1, 912.7 215.3, 940.0 215.3 C 967.3 215.3, 967.3 203.0, 994.7 203.0 C 1022.0 203.0, 1022.0 162.3, 1049.3 162.3 C 1076.7 162.3, 1076.7 59.8, 1104.0 59.8 L 1104 270 L 448 270 Z" fill="#0969ff"/>
+<line x1="448.0" y1="270" x2="448.0" y2="280" stroke="#43828c"/><text x="448.0" y="302" text-anchor="middle" class="axis">25/10</text><line x1="557.3" y1="270" x2="557.3" y2="280" stroke="#43828c"/><text x="557.3" y="302" text-anchor="middle" class="axis">25/12</text><line x1="666.7" y1="270" x2="666.7" y2="280" stroke="#43828c"/><text x="666.7" y="302" text-anchor="middle" class="axis">26/02</text><line x1="776.0" y1="270" x2="776.0" y2="280" stroke="#43828c"/><text x="776.0" y="302" text-anchor="middle" class="axis">26/04</text><line x1="885.3" y1="270" x2="885.3" y2="280" stroke="#43828c"/><text x="885.3" y="302" text-anchor="middle" class="axis">26/06</text><line x1="994.7" y1="270" x2="994.7" y2="280" stroke="#43828c"/><text x="994.7" y="302" text-anchor="middle" class="axis">26/08</text><line x1="1104.0" y1="270" x2="1104.0" y2="280" stroke="#43828c"/><text x="1104.0" y="302" text-anchor="middle" class="axis">26/10</text>
+<line x1="1104" y1="270.0" x2="1116" y2="270.0" stroke="#43828c"/><text x="1124" y="277.0" class="axis">0</text><line x1="1104" y1="253.3" x2="1116" y2="253.3" stroke="#43828c"/><text x="1124" y="260.3" class="axis">200</text><line x1="1104" y1="236.6" x2="1116" y2="236.6" stroke="#43828c"/><text x="1124" y="243.6" class="axis">400</text><line x1="1104" y1="219.9" x2="1116" y2="219.9" stroke="#43828c"/><text x="1124" y="226.9" class="axis">600</text><line x1="1104" y1="203.2" x2="1116" y2="203.2" stroke="#43828c"/><text x="1124" y="210.2" class="axis">800</text><line x1="1104" y1="186.5" x2="1116" y2="186.5" stroke="#43828c"/><text x="1124" y="193.5" class="axis">1,000</text><line x1="1104" y1="169.8" x2="1116" y2="169.8" stroke="#43828c"/><text x="1124" y="176.8" class="axis">1,200</text><line x1="1104" y1="153.2" x2="1116" y2="153.2" stroke="#43828c"/><text x="1124" y="160.2" class="axis">1,400</text><line x1="1104" y1="136.5" x2="1116" y2="136.5" stroke="#43828c"/><text x="1124" y="143.5" class="axis">1,600</text><line x1="1104" y1="119.8" x2="1116" y2="119.8" stroke="#43828c"/><text x="1124" y="126.8" class="axis">1,800</text><line x1="1104" y1="103.1" x2="1116" y2="103.1" stroke="#43828c"/><text x="1124" y="110.1" class="axis">2,000</text><line x1="1104" y1="86.4" x2="1116" y2="86.4" stroke="#43828c"/><text x="1124" y="93.4" class="axis">2,200</text><line x1="1104" y1="69.7" x2="1116" y2="69.7" stroke="#43828c"/><text x="1124" y="76.7" class="axis">2,400</text><line x1="1104" y1="53.0" x2="1116" y2="53.0" stroke="#43828c"/><text x="1124" y="60.0" class="axis">2,600</text>
+</svg>
