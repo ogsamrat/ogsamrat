@@ -38,5 +38,5 @@
 ### `./activity`
 
 <p align="center">
-  <img width="100%" src="./assets/activity-20261024-b811a5783d11.svg" alt="Samrat's GitHub contribution graph" />
+  <img width="100%" src="./assets/activity-20261025-bc0ec90f1b8e.svg" alt="Samrat's GitHub contribution graph" />
 </p>
